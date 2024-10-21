@@ -1,0 +1,54 @@
+$font-Posterama: 'Posterama Text', sans-serif;
+$font-Montserrat: 'Montserrat', sans-serif;
+
+@mixin button-hover{
+    background-color: var(--hover);
+    transition: background-color .5s ease 0s;
+}
+
+@mixin link-hover{
+    color: var(--hover);
+    transition: background-color .5s ease 0s;
+}
+
+@mixin button-red{
+    font-family: $font-Montserrat;
+    text-align: center;
+
+    background-color: var(--btn-color);
+    color: var(--text-color);
+}
+
+@mixin button-white{
+    font-family: $font-Montserrat;
+    text-align: center;
+
+    background-color: transparent;
+    color: var(--btn-color);
+    border: 2px solid var(--btn-color);
+}
+
+@mixin shake-circle{
+    position: absolute;
+    content: '';
+    width: 32px;
+    height: 32px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    animation: shake 2s infinite ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}

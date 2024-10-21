@@ -1,0 +1,260 @@
+/*worksteps*/
+.worksteps {
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    width: 340px;
+  }
+
+  &__right {
+    width: calc(100% - 360px);
+    position: relative;
+    z-index: 10;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  &__swiper {
+    position: relative;
+    width: 100%;
+  }
+
+  &__swiper-wrapper {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    right: 0;
+    height: 447px;
+
+      @media(max-width: 1440px){
+          height: 522px;
+        }
+  }
+
+  &__swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    gap: 60px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__coll {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+  }
+}
+
+.swiper-pagination {
+	padding: 0;
+	display: flex;
+	width: 100%;
+	margin: 0;
+}
+
+.swiper-pagination .text {
+	width: 100% !important;
+}
+
+.swiper-pagination .box {
+	border-radius: 0;
+	background: transparent;
+	font-weight: 400;
+	font-size: 18px;
+	letter-spacing: -0.01em;
+	font-size: 12px;
+	width: 25%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.arrow {
+	position: absolute;
+	width: 42px;
+	height: 202px;
+	top: calc(50% - 101px);
+	z-index: 10;
+	cursor: pointer;
+	transition: all 0.3s;
+
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &_prev {
+    left: 20px;
+  }
+
+  &_next {
+    right: 20px;
+  }
+}
+
+
+.swiper-pagination-bullet {
+	margin: 10px !important;
+	border-top: 3px solid;
+	opacity: 1 !important;
+}
+
+.swiper-pagination-bullet .bigNumber,
+.worksteps__number {
+	width: 40px;
+	height: 40px;
+	background: #621f2a;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 100%;
+	letter-spacing: -0.01em;
+	text-align: center;
+	color: #fff;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.worksteps__number {
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	border: 1px solid #373e46;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 100%;
+	letter-spacing: -0.01em;
+	text-align: center;
+	color: #373e46;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+	color: #fff;
+}
+
+.swiper-pagination-bullet-active .bigNumber {
+	color: #fff;
+}
+.swiper-pagination-bullet-active .text {
+	color: #373e46;
+}
+
+.worksteps__coll.active .worksteps__number {
+	background: #621f2a;
+	border-color: #621f2a;
+	color: #fff;
+}
+
+.worksteps__coll.active .worksteps__desc {
+	color: #621f2a;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	width: auto;
+	height: auto;
+	margin: 0 !important;
+	background: transparent;
+	border: none;
+	gap: 12px;
+}
+
+.main-pagination { 
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	z-index: 1;
+  display: none;/*скрываем пагинацию*/
+}
+
+.main-pagination .swiper-pagination-bullet {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	width: 20px;
+	height: 20px;
+	margin: 0 !important;
+	background: #fff;
+}
+
+.slide {
+	position: absolute;
+	width: 1080px !important;
+	right: 0;
+	border-radius: 20px;
+	display: flex;
+	justify-content: end;
+
+  
+  &__content {
+    border-radius: 0 20px 20px 0;
+    padding: 40px;
+    width: 650px !important;
+    height: 447px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background: rgba(55, 62, 70, 0.6);
+
+    @media(max-width: 1440px){
+          width: 537px !important;
+          height: 522px;
+          padding-right: 128px;
+        }
+  }
+
+  &__title {
+    font-family: "Posterama Text", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: -0.01em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    color: var(--text-color);
+  } 
+  
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
