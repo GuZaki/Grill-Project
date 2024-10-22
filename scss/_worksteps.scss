@@ -3,15 +3,36 @@
 
   &__title {
     margin-bottom: 80px;
+    @media(max-width: 756px){
+      margin-bottom: 40px;
+    }
   }
 
   &__body {
     display: flex;
     justify-content: space-between;
+    
+    @media(max-width: 1024px){
+      height: 462px;
+    }
+    
+    @media(max-width: 768px){
+      gap: 40px;
+    }
+
+    @media(max-width: 756px){
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+    }
   }
 
   &__left {
     width: 340px;
+    
+    @media(max-width: 768px){
+      width: auto;
+    }
   }
 
   &__right {
@@ -20,6 +41,14 @@
     z-index: 10;
     border-radius: 20px;
     overflow: hidden;
+
+    @media(max-width: 768px){
+      width: 398px; 
+    }
+
+    @media(max-width: 756px){
+      width: 100%;
+    }
   }
 
   &__swiper {
@@ -33,10 +62,14 @@
     right: 0;
     height: 447px;
 
-      @media(max-width: 1440px){
-          height: 522px;
-        }
+  @media(max-width: 1440px){
+    height: 522px;
   }
+
+  @media(max-width: 756px){
+      height: 575px;
+    }
+}
 
   &__swiper-pagination {
     display: flex;
@@ -51,8 +84,19 @@
     display: flex;
     flex-direction: column;
     gap: 60px;
+
+    @media(max-width: 756px){
+      flex-direction: row;
+      gap: 45px;
+    }
   }
 
+    &__desc {
+    @media(max-width: 756px){
+      display: none; //скрываем название номеров
+    }
+  }
+  
   &__coll {
     display: flex;
     align-items: center;
@@ -95,6 +139,9 @@
 	cursor: pointer;
 	transition: all 0.3s;
 
+  @media(max-width: 1024px){
+    display: none; //скрываем стрелки слайдера
+  }
 
   &:hover {
     transform: scale(1.1);
@@ -193,6 +240,10 @@
 	gap: 20px;
 	z-index: 1;
   display: none;/*скрываем пагинацию*/
+  
+  @media(max-width: 1024px){
+    display: flex; 
+  }
 }
 
 .main-pagination .swiper-pagination-bullet {
@@ -200,9 +251,14 @@
 	display: flex;
 	align-items: center;
 	width: 20px;
-	height: 20px;
-	margin: 0 !important;
-	background: #fff;
+	height: 2px;
+	margin: 0 0 20px 0 !important;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+.main-pagination .swiper-pagination-bullet-active {
+  background: #fff !important;
 }
 
 .slide {
@@ -212,7 +268,7 @@
 	border-radius: 20px;
 	display: flex;
 	justify-content: end;
-
+  height: 100%;
   
   &__content {
     border-radius: 0 20px 20px 0;
@@ -224,10 +280,38 @@
     background: rgba(55, 62, 70, 0.6);
 
     @media(max-width: 1440px){
-          width: 537px !important;
-          height: 522px;
-          padding-right: 128px;
-        }
+      width: 500px !important;//537 по макету
+      height: 522px;
+      padding-right: 78px;
+    }
+
+    @media(max-width: 1024px){
+      border-radius: 20px;
+      padding: 20px;
+      width: 348px !important; 
+      height: 245px;
+      margin-top: 20px;
+    }
+
+    @media(max-width: 768px){
+      border-radius: 12px;
+      height: 287px;
+      padding: 20px;
+      width: 280px !important; 
+      margin-right: 20px;
+    }
+
+    @media(max-width: 425px){
+      margin-right: 50px;
+    }
+
+    @media(max-width: 375px){
+      margin-right: 25px;
+    }
+
+    @media(max-width: 340px){
+      margin-right: 1px;
+    }
   }
 
   &__title {
@@ -237,10 +321,21 @@
     letter-spacing: -0.01em;
     color: var(--text-color);
     margin-bottom: 20px;
+
+    @media(max-width: 1024px){
+      font-size: 22px;
+    }
   }
 
   &__text {
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media(max-width: 1024px){
+      font-size: 16px;
+    }
   } 
   
   &__img {
