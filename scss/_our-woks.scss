@@ -1,112 +1,30 @@
 /*our-works*/
-
 .our-works {
 
   &__title {
     margin-bottom: 80px;
-
+    
     @media(max-width: 756px){
       margin-bottom: 40px;
     }
+  }
 
-    &__slide {
-	position: absolute;
-	width: 100%;
-    height: 100%;
-	right: 0;
-	display: flex;
-	justify-content: end;
-
-    &-content {
-        border-radius: 20px;
-        padding: 40px;
-        max-width: 560px;
-        height: 349px;
-        // width: auto !important;
-        // height: 100%;
-        -webkit-backdrop-filter: blur(4px);
-        backdrop-filter: blur(4px);
-        background: rgba(55, 62, 70, 0.6);
-        position: absolute;
-        // max-width: 650px;
-
-        @media(max-width: 1440px){
-            max-width: 500px;
-            padding-right: 78px;
-        }
-
-        @media(max-width: 1024px){
-            border-radius: 20px;
-            padding: 20px;
-            height: auto;
-            width: auto;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        @media(max-width: 940px){
-            border-radius: 12px;
-            width: calc(100% - 40px);
-        }
-    }
-
-    &__title {
-        font-family: "Posterama Text", sans-serif;
-        font-weight: 600;
-        font-size: 36px;
-        letter-spacing: -0.01em;
-        color: var(--text-color);
-        margin-bottom: 20px;
-
-        @media(max-width: 1024px){
-        font-size: 22px;
-        }
-    }
-
-    &__text {
-        color: var(--text-color);
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        @media(max-width: 1024px){
-        font-size: 16px;
-        }
-    } 
-
-    &__img {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-
-    &__img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    }
-}
-
-  &__right {
-    // width: calc(100% - 360px);
+  &__main {
     position: relative;
     z-index: 10;
     overflow: hidden;
-    height: 929px;
 
-    @media(max-width: 768px){
-      width: 398px; 
-    }
+    // @media(max-width: 768px){
+    //   width: 398px; 
+    // }
 
-    @media(max-width: 756px){
-      width: 100%;
-    }
+    // @media(max-width: 756px){
+    //   width: 100%;
+    // }
 
+    // @media(max-width: 375px){
+    //   border-radius: 0;
+    // }
   }
 
   &__swiper {
@@ -120,80 +38,25 @@
     right: 0;
     height: 929px;
 
-  @media(max-width: 1440px){
-    height: 522px;
+  @media(max-width: 768px){
+    height: 598px;
   }
 
-  @media(max-width: 756px){
-      height: 575px;
-    }
-}
-
-  &__swiper-pagination {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    position: relative;
-    gap: 60px;
-  }
-
-  &__row {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-
-    @media(max-width: 756px){
-      flex-direction: row;
-      gap: 45px;
-    }
-  }
-
-    &__desc {
-    @media(max-width: 756px){
-      display: none; //скрываем название номеров
-    }
-  }
-  
-  &__coll {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-
-    &:hover{
-      font-weight: 500;
-      color: #621F2A;
-    }
+  @media(max-width: 475px){
+    height: 784px;
   }
 }
 
-.swiper-pagination {
+}
+
+.swiper-pagination-2 {
 	padding: 0;
 	display: flex;
 	width: 100%;
 	margin: 0;
 }
 
-.swiper-pagination .text {
-	width: 100% !important;
-}
-
-.swiper-pagination .box {
-	border-radius: 0;
-	background: transparent;
-	font-weight: 400;
-	font-size: 18px;
-	letter-spacing: -0.01em;
-	font-size: 12px;
-	width: 25%;
-	height: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.arrow {
+.arrow-2 {
 	position: absolute;
 	width: 42px;
 	height: 202px;
@@ -202,9 +65,9 @@
 	cursor: pointer;
 	transition: all 0.3s;
 
-  @media(max-width: 1024px){
-    display: none; //скрываем стрелки слайдера
-  }
+  // @media(max-width: 1024px){
+  //   display: none; //скрываем стрелки слайдера
+  // }
 
   &:hover {
     transform: scale(1.1);
@@ -219,34 +82,15 @@
   }
 }
 
-.swiper-pagination-bullet {
-	margin: 10px !important;
-	border-top: 3px solid;
-	opacity: 1 !important;
-}
-
-.swiper-pagination-bullet-active {
+.swiper-pagination-2 > .swiper-pagination-bullet-active {
 	color: #fff;
 }
 
-.swiper-pagination-bullet-active .bigNumber {
-	color: #fff;
-}
-.swiper-pagination-bullet-active .text {
+.swiper-pagination-2 > .swiper-pagination-bullet-active .text {
 	color: #373e46;
 }
 
-// .worksteps__coll.active .worksteps__number {
-// 	background: #621f2a;
-// 	border-color: #621f2a;
-// 	color: #fff;
-// }
-
-// .worksteps__coll.active .worksteps__desc {
-// 	color: #621f2a;
-// }
-
-.swiper-pagination-clickable .swiper-pagination-bullet {
+.swiper-pagination-2 > .swiper-pagination-clickable .swiper-pagination-bullet {
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -258,7 +102,7 @@
 	gap: 12px;
 }
 
-.our-works__right > .main-pagination { 
+.swiper-pagination-2 { 
 	position: absolute;
 	bottom: 20px;
 	left: 0;
@@ -266,27 +110,114 @@
 	justify-content: center;
 	gap: 20px;
 	z-index: 1;
-    //display: none;/*скрываем пагинацию*/
-
+  
   @media(max-width: 1024px){
     display: flex; 
   }
 }
 
-.main-pagination .swiper-pagination-bullet {
+.swiper-pagination-2 > .swiper-pagination-bullet {
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	width: 20px;
+	width: 60px;
 	height: 2px;
 	margin: 0 0 20px 0 !important;
   background: rgba(255, 255, 255, 0.3);
 }
-
-.main-pagination .swiper-pagination-bullet-active {
+.swiper-pagination-2 > .swiper-pagination-bullet-active {
   background: #fff !important;
 }
 
+.slide-2 {
+	position: absolute;
+	width: 100%;
+  height: 100%;
+	right: 0;
+	border-radius: 20px;
+	display: flex;
+	justify-content: end;
+  
+  &__content {
+    border-radius: 20px;
+    padding: 40px;
+    height: auto;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background: rgba(55, 62, 70, 0.6);
+    position: absolute;
+    width: 560px;
+    top: 248px;
+    right: 240px;
 
+    @media(max-width: 1024px){
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 416px;
+    }
 
+    @media(max-width: 560px){
+      padding: 20px;
+    }
+
+    // @media(max-width: 940px){
+    //   border-radius: 12px;
+    //   width: calc(100% - 40px);
+    // }
+  }
+
+  &__title {
+    font-family: "Posterama Text", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: -0.01em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+
+    @media(max-width: 1024px){
+      font-size: 22px;
+    }
+  }
+
+  &__text {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media(max-width: 1024px){
+      font-size: 16px;
+    }
+
+    & > p {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+
+      & > span {
+        font-weight: 400;
+      }
+    }
+    
+    & > small {
+      font-size: 14px;
+    }
+  } 
+  
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
